@@ -1,11 +1,7 @@
 /* Archivo: fonts.css - Configuración de tipografías personalizadas */
-/* Importa fuentes de Google Fonts y define clases de tipografía personalizadas */
+/* Define clases de tipografía personalizadas */
 /* Utiliza la capa de componentes de Tailwind para integrar estilos personalizados */
-
-/* Importación de fuentes de Google Fonts: Space Mono */
-/* Fuente monoespaciada ideal para interfaces de desarrollador */
-/* display=swap optimiza la carga de fuentes para mejor rendimiento */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/* NOTA: La fuente Space Mono se carga de forma asíncrona desde Layout.astro */
 
 /* Capa de componentes de Tailwind: Permite definir clases personalizadas */
 /* Las clases definidas aquí pueden ser sobrescritas por utilidades de Tailwind */
@@ -15,7 +11,7 @@
   /* Usada en el body del Layout para dar estilo de cuaderno/notebook */
   /* Fallback a fuentes monoespaciadas del sistema si las fuentes web no cargan */
   .font-notebook {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     letter-spacing: 0.025em; /* Espaciado de letras ligeramente aumentado para legibilidad */
   }
 }
