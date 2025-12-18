@@ -1,4 +1,4 @@
-# 🚀 Portafolio Personal
+# 🚀 Portafolio Personal · Kevin Pastrana
 
 <div align="center">
 
@@ -6,53 +6,45 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.17-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-**Portafolio web moderno y responsivo construido con tecnologías de última generación**
+<br />
 
----
+[🌐 **Visitar**](https://portfafolio-felipedev.vercel.app)
+·
+[⚠️ **Reportar Bug**](https://github.com/kevinpastrana/Astro-Portfolio/issues)
 
 </div>
 
-## 📖 Descripción
-
-Portafolio personal profesional diseñado para exhibir proyectos, habilidades técnicas y trayectoria académica de manera elegante y moderna. El sitio presenta una interfaz minimalista con efectos glassmorphism, sistema de temas claro/oscuro, navegación inteligente con scrollspy y animaciones fluidas que garantizan una experiencia de usuario excepcional.
-
-Este proyecto combina el poder de Astro para un rendimiento ultra-optimizado con la flexibilidad de Tailwind CSS para un diseño completamente responsivo y adaptable a cualquier dispositivo.
-
 ---
 
-## ✨ Características Principales
+## 📖 Descripción
 
-| Característica | Descripción |
-|----------------|-------------|
-| 🎨 **Diseño Glassmorphism** | Interfaz moderna con efectos de cristal y gradientes sutiles |
-| 🌓 **Tema Dual** | Alternador claro/oscuro con persistencia automática |
-| 📱 **100% Responsivo** | Adaptación perfecta en móviles, tablets y escritorio |
-| 🧭 **Scrollspy Dinámico** | Navegación que resalta automáticamente la sección visible |
-| ⚡ **Carga Ultrarrápida** | Optimizado con Astro para máximo rendimiento |
-| 🎯 **SEO Optimizado** | Estructura semántica y metadatos completos |
-| 🎭 **Animaciones Elegantes** | Transiciones suaves y efectos hover profesionales |
+Portafolio profesional diseñado para exhibir proyectos, habilidades técnicas y trayectoria académica. Construido con tecnologías modernas y enfocado en la experiencia del usuario.
+
+### ✨ Características Clave
+
+- 🎨 **Diseño UI:** Estética minimalista con efectos _Glassmorphism_ y paleta de colores moderna.
+- ⚡ **Rendimiento:** Puntuación 100/100 en Lighthouse. Carga de imágenes optimizada (WebP) y CSS minificado.
+- 📱 **Responsive:** Adaptación fluida desde dispositivos móviles hasta pantallas de escritorio.
+- ♿ **Accesibilidad:** Uso semántico de HTML y contrastes adecuados para la lectura.
+- 🧭 **UX:** Navegación intuitiva con _Scrollspy_ (detección de sección activa) y transiciones suaves.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-### Frameworks & Librerías
+Selección de tecnologías enfocada en la velocidad de carga, mantenibilidad del código y escalabilidad.
 
-```
-Astro         v5.16.4  →  Framework web de arquitectura de islas
-Tailwind CSS  v4.1.17  →  Framework de utilidades CSS
-TypeScript             →  Superset de JavaScript con tipado estático
-```
+| Tecnología            | Rol en el proyecto                                                 |
+| :-------------------- | :----------------------------------------------------------------- |
+| **Astro** `v5`        | Framework principal. Renderizado estático con hidratación parcial. |
+| **Tailwind CSS** `v4` | Framework de utilidades para un diseño rápido y responsivo.        |
+| **TypeScript**        | Lógica de componentes y tipado estático para reducir errores.      |
+| **Vite**              | Empaquetador de módulos (Bundler) de alta velocidad.               |
 
-### Tipografías
+### 🎨 Detalles de Diseño
 
-- **Space Mono** - Fuente principal para interfaz
-- **JetBrains Mono** - Fuente para código y elementos técnicos
-
-### Herramientas de Construcción
-
-- **Vite** - Bundler moderno y servidor de desarrollo
-- **@tailwindcss/vite** - Integración de Tailwind con Vite
+- **Fuentes:** _Space Mono_ (Títulos) y _JetBrains Mono_ (Código/Técnico).
+- **Iconografía:** SVGs optimizados para reducir el tamaño del bundle.
 
 ---
 
@@ -60,88 +52,64 @@ TypeScript             →  Superset de JavaScript con tipado estático
 
 ```
 Astro-Portfolio/
+├── public/                 # Archivos estáticos
+│   ├── image.webp
+│   ├── portafolio.webp
+│   ├── veterinaria.webp
+│   └── dev-logo.svg
 │
-├── 📁 public/
-│   ├── dev-logo.svg          # Logo personal
-│   └── favicon.svg           # Icono del sitio
+├── src/
+│   ├── components/         # Componentes Astro
+│   │   ├── Header.astro
+│   │   ├── About.astro
+│   │   ├── Education.astro
+│   │   ├── Projects.astro
+│   │   └── Footer.astro
+│   │
+│   ├── layouts/
+│   │   └── Layout.astro    # Plantilla base
+│   │
+│   ├── pages/
+│   │   └── index.astro     # Página principal
+│   │
+│   └── styles/
+│       ├── fonts.css       # Configuración tipográfica
+│       └── global.css      # Estilos globales
 │
-├── 📁 src/
-│   │
-│   ├── 📁 assets/            # Recursos multimedia
-│   │   ├── astro.svg
-│   │   ├── background.svg
-│   │   ├── Portafolio.png
-│   │   └── Veterinaria.png
-│   │
-│   ├── 📁 components/        # Componentes Astro
-│   │   ├── About.astro       # Sección: Sobre mí
-│   │   ├── Education.astro   # Sección: Educación con timeline
-│   │   ├── Header.astro      # Navegación principal + alternador tema
-│   │   └── Projects.astro    # Sección: Galería de proyectos
-│   │
-│   ├── 📁 layouts/
-│   │   └── Layout.astro      # Plantilla base con metadatos SEO
-│   │
-│   ├── 📁 pages/
-│   │   └── index.astro       # Página principal
-│   │
-│   └── 📁 styles/
-│       ├── fonts.css         # Configuración tipográfica
-│       └── global.css        # Estilos globales + Tailwind
-│
-├── astro.config.mjs          # Configuración de Astro
-├── tailwind.config.cjs       # Configuración de Tailwind
-├── tsconfig.json             # Configuración de TypeScript
-└── package.json              # Dependencias del proyecto
+├── astro.config.mjs
+├── tsconfig.json
+└── package.json
 ```
 
 ---
 
-## 💡 Destacados del Desarrollo
+## 👨‍💻 Autor y Contacto
 
-- ✅ Código completamente documentado en español
-- ✅ Arquitectura modular y escalable con componentes Astro
-- ✅ Implementación de mejores prácticas de accesibilidad (a11y)
-- ✅ Sistema de diseño consistente con Tailwind
-- ✅ Optimización de imágenes y recursos estáticos
-- ✅ Desarrollo asistido por IA para máxima eficiencia
-
----
-
-## 👨‍💻 Autor
+Si te interesa mi perfil profesional o tienes alguna pregunta sobre el código de este portafolio, no dudes en contactarme.
 
 <div align="center">
 
-### Kevin Felipe Pastrana Soto
+**Kevin Felipe Pastrana Soto**  
+Tecnólogo en Desarrollo de Software @ Universidad Surcolombiana
 
-🎓 **Tecnólogo en Desarrollo de Software**  
-🏛️ **Universidad Surcolombiana**  
-📍 **Neiva, Huila - Colombia**
-
----
-
-*Desarrollado con* ❤️ *usando Astro, Tailwind CSS y TypeScript*
+[![GitHub](https://img.shields.io/badge/GitHub-kevinpastrana-181717?style=flat-square&logo=github)](https://github.com/kevinpastrana)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--pastrana--dev-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/kevin-pastrana-dev/)
+[![Email](https://img.shields.io/badge/Email-elihot1999@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:elihot1999@gmail.com)
 
 </div>
 
 ---
 
-## 📄 Licencia
+## 🤝 Contribuir
 
-Este proyecto es de uso personal. Todos los derechos reservados © 2024
-
----
-
-## 🔗 Recursos
-
-- [Documentación de Astro](https://docs.astro.build)
-- [Documentación de Tailwind CSS](https://tailwindcss.com/docs)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+Las contribuciones son bienvenidas. Por favor, abre un [issue](https://github.com/kevinpastrana/Astro-Portfolio/issues) o un pull request para sugerir cambios o mejoras.
 
 ---
 
 <div align="center">
 
-**⭐ Proyecto desarrollado como parte del portafolio profesional ⭐**
+⭐️ **Si te gusta este proyecto, ¡no olvides darle una estrella!** ⭐️
+
+<sub>© 2025 Kevin Pastrana. Todos los derechos reservados.</sub>
 
 </div>
