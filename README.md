@@ -2,49 +2,61 @@
 
 <div align="center">
 
-![Astro](https://img.shields.io/badge/Astro-5.16.4-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.17-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
 <br />
+<br />
 
-[🌐 **Visitar**](https://portfafolio-felipedev.vercel.app)
-·
-[⚠️ **Reportar Bug**](https://github.com/kevinpastrana/Astro-Portfolio/issues)
+<a href="https://portfafolio-felipedev.vercel.app" target="_blank">
+  <img src="https://img.shields.io/badge/VER_DEMO_ONLINE-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Ver Demo"/>
+</a>
+&nbsp;
+<a href="https://github.com/kevinpastrana/Astro-Portfolio/issues" target="_blank">
+  <img src="https://img.shields.io/badge/REPORTAR_BUG-B00020?style=for-the-badge&logo=github&logoColor=white" alt="Reportar Bug"/>
+</a>
 
 </div>
 
 ---
 
-## 📖 Descripción
+## 📖 Sobre el Proyecto
 
-Portafolio profesional diseñado para exhibir proyectos, habilidades técnicas y trayectoria académica. Construido con tecnologías modernas y enfocado en la experiencia del usuario.
+Este portafolio es más que una colección de proyectos; es una demostración técnica de desarrollo web moderno. Diseñado bajo la arquitectura de **Islas de Astro**, el sitio ofrece una navegación instantánea y fluida, eliminando la carga de JavaScript innecesaria para priorizar el contenido.
 
-### ✨ Características Clave
+El objetivo fue crear una identidad digital que combine una estética visual impactante con una ingeniería de software sólida.
 
-- 🎨 **Diseño UI:** Estética minimalista con efectos _Glassmorphism_ y paleta de colores moderna.
-- ⚡ **Rendimiento:** Puntuación 100/100 en Lighthouse. Carga de imágenes optimizada (WebP) y CSS minificado.
-- 📱 **Responsive:** Adaptación fluida desde dispositivos móviles hasta pantallas de escritorio.
-- ♿ **Accesibilidad:** Uso semántico de HTML y contrastes adecuados para la lectura.
-- 🧭 **UX:** Navegación intuitiva con _Scrollspy_ (detección de sección activa) y transiciones suaves.
+### ✨ Características Destacadas
+
+- 🎨 **Interfaz Premium:** Diseño _pixel-perfect_ con estética minimalista, efectos _Glassmorphism_ y modo oscuro refinado.
+- 🚀 **Rendimiento Extremo:** Puntuación **100/100 en Lighthouse**. Estrategia de carga diferida (Lazy Loading) y assets optimizados.
+- 📱 **Diseño Adaptativo:** Experiencia fluida y consistente en cualquier dispositivo (Móvil, Tablet y Desktop).
+- ♿ **Accesibilidad Universal:** Marcado HTML semántico y altos ratios de contraste para una lectura cómoda.
+- 🧭 **UX Inmersiva:** Navegación inteligente con _Scrollspy_, indicadores activos y micro-interacciones suaves.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-Selección de tecnologías enfocada en la velocidad de carga, mantenibilidad del código y escalabilidad.
+Este portafolio ha sido construido priorizando el rendimiento (Performance-first), la escalabilidad y una excelente experiencia de desarrollo (DX).
 
-| Tecnología            | Rol en el proyecto                                                 |
-| :-------------------- | :----------------------------------------------------------------- |
-| **Astro** `v5`        | Framework principal. Renderizado estático con hidratación parcial. |
-| **Tailwind CSS** `v4` | Framework de utilidades para un diseño rápido y responsivo.        |
-| **TypeScript**        | Lógica de componentes y tipado estático para reducir errores.      |
-| **Vite**              | Empaquetador de módulos (Bundler) de alta velocidad.               |
+| Tecnología                                                                                                           | Propósito y Características                                                                    |
+| :------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| ![Astro](https://img.shields.io/badge/Astro_v5-FF5D01?style=flat-square&logo=astro&logoColor=white)                  | **Core Framework.** Arquitectura de Islas para reducir JS no utilizado y renderizado estático. |
+| ![Tailwind](https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | **Estilizado.** Sistema de utilidades para un diseño atómico, responsivo y mantenible.         |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)      | **Lógica.** Tipado estático estricto para prevenir errores en tiempo de ejecución.             |
+| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)                        | **Bundler.** Entorno de desarrollo ultrarrápido y optimización de assets para producción.      |
 
-### 🎨 Detalles de Diseño
+### 🎨 UI Kit & Diseño
 
-- **Fuentes:** _Space Mono_ (Títulos) y _JetBrains Mono_ (Código/Técnico).
-- **Iconografía:** SVGs optimizados para reducir el tamaño del bundle.
+Detalles estéticos que definen la identidad visual del proyecto:
+
+- **🅰️ Tipografía:**
+  - `Space Mono`: Usada en encabezados para un toque brutalista/técnico.
+  - `JetBrains Mono`: Para bloques de código y datos técnicos.
+- **🎭 Iconografía:** `Lucide Icons` / SVGs nativos optimizados.
+- **🌑 Tema:** Diseño oscuro con acentos de luz (Glassmorphism) para profundidad.
 
 ---
 
@@ -52,64 +64,73 @@ Selección de tecnologías enfocada en la velocidad de carga, mantenibilidad del
 
 ```
 Astro-Portfolio/
-├── public/                 # Archivos estáticos
-│   ├── image.webp
-│   ├── portafolio.webp
-│   ├── veterinaria.webp
-│   └── dev-logo.svg
+├── public/                  # Archivos estáticos
+│   ├── image.webp           # Imagen de portada
+│   ├── portafolio.webp      # Imagen de portafolio
+│   ├── veterinaria.webp     # Imagen de veterinaria
+│   └── dev-logo.svg         # Logo del proyecto
 │
 ├── src/
-│   ├── components/         # Componentes Astro
-│   │   ├── Header.astro
-│   │   ├── About.astro
-│   │   ├── Education.astro
-│   │   ├── Projects.astro
-│   │   └── Footer.astro
+│   ├── components/          # Componentes Astro
+│   │   ├── Header.astro     # Componente de encabezado
+│   │   ├── About.astro      # Componente de sobre mí
+│   │   ├── Education.astro  # Componente de educación
+│   │   ├── Projects.astro   # Componente de proyectos
+│   │   └── Footer.astro     # Componente de pie de página
 │   │
 │   ├── layouts/
-│   │   └── Layout.astro    # Plantilla base
+│   │   └── Layout.astro     # Plantilla base
 │   │
 │   ├── pages/
-│   │   └── index.astro     # Página principal
+│   │   └── index.astro      # Página principal
 │   │
 │   └── styles/
-│       ├── fonts.css       # Configuración tipográfica
-│       └── global.css      # Estilos globales
+│       ├── fonts.css        # Configuración tipográfica
+│       └── global.css       # Estilos globales
 │
-├── astro.config.mjs
-├── tsconfig.json
-└── package.json
+├── astro.config.mjs         # Configuración de Astro
+├── tsconfig.json            # Configuración de TypeScript
+└── package.json             # Dependencias del proyecto
 ```
 
 ---
 
-## 👨‍💻 Autor y Contacto
-
-Si te interesa mi perfil profesional o tienes alguna pregunta sobre el código de este portafolio, no dudes en contactarme.
+## 👨‍💻 Autor
 
 <div align="center">
 
-**Kevin Felipe Pastrana Soto**  
-Tecnólogo en Desarrollo de Software @ Universidad Surcolombiana
+**Kevin Felipe Pastrana Soto**
+<br />
+Tecnólogo en Desarrollo de Software | Universidad Surcolombiana
+<br />
 
-[![GitHub](https://img.shields.io/badge/GitHub-kevinpastrana-181717?style=flat-square&logo=github)](https://github.com/kevinpastrana)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-kevin--pastrana--dev-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/kevin-pastrana-dev/)
-[![Email](https://img.shields.io/badge/Email-elihot1999@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:elihot1999@gmail.com)
+<a href="https://github.com/kevinpastrana" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+&nbsp;
+<a href="https://www.linkedin.com/in/kevin-pastrana-dev/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="mailto:elihot1999@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+</a>
 
 </div>
 
 ---
 
-## 🤝 Contribuir
+## 🤝 Contribuciones y Feedback
 
-Las contribuciones son bienvenidas. Por favor, abre un [issue](https://github.com/kevinpastrana/Astro-Portfolio/issues) o un pull request para sugerir cambios o mejoras.
+- **🐛 ¿Encontraste un bug?** Si ves algo que no funciona o se puede optimizar, no dudes en abrir un [Issue](https://github.com/kevinpastrana/Astro-Portfolio/issues).
+- **💡 ¿Ideas de mejora?** Los Pull Requests son bienvenidos para correcciones ortográficas, mejoras de rendimiento o sugerencias de diseño.
 
----
+<br />
 
 <div align="center">
 
-⭐️ **Si te gusta este proyecto, ¡no olvides darle una estrella!** ⭐️
+**¿Te ha sido útil este proyecto o te gusta el diseño?**
 
-<sub>© 2025 Kevin Pastrana. Todos los derechos reservados.</sub>
+[![Star Project](https://img.shields.io/badge/⭐_Dar_Estrella_al_Proyecto-181717?style=for-the-badge&logo=github&logoColor=FFD700)](https://github.com/kevinpastrana/Astro-Portfolio/stargazers)
 
 </div>
