@@ -1,0 +1,66 @@
+---
+// Layout: Plantilla base del portafolio
+// Define la estructura HTML principal y metadatos esenciales
+// Incluye importación de estilos globales y tipografía personalizada
+// Utiliza el sistema de slots de Astro para renderizar contenido de páginas
+// Configuración base para SEO, responsive design y accesibilidad
+import "../styles/fonts.css";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<!-- Elemento raíz HTML: Define el idioma del documento como español -->
+<html lang="es">
+	<!-- Head: Contenedor de metadatos y configuración del documento -->
+	<head>
+		<!-- Meta charset: Especifica codificación de caracteres UTF-8 para soporte internacional -->
+		<meta charset="UTF-8" />
+		<!-- Meta viewport: Configuración responsive para adaptación en dispositivos móviles -->
+		<!-- Asegura que el ancho se ajuste al dispositivo y evita zoom inicial no deseado -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- SEO básico: Descripción del sitio para motores de búsqueda -->
+		<meta
+			name="description"
+			content="Portafolio de Felipe, Tecnólogo en Desarrollo de Software. Proyectos modernos con Astro, TailwindCSS y tecnologías web para crear experiencias rápidas y accesibles."
+		/>
+
+		<!-- Open Graph: Metadatos para previsualizaciones en redes sociales -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Portafolio de Felipe - Tecnólogo en Desarrollo de Software" />
+		<meta
+			property="og:description"
+			content="Descubre los proyectos, estudios y experiencia de Felipe en desarrollo de software, diseño de interfaces y aplicaciones web modernas."
+		/>
+		<meta property="og:url" content="https://tusitio.com" />
+		<meta property="og:image" content="https://tusitio.com/dev-logo.svg" />
+
+		<!-- Meta para navegadores móviles: Color del tema del navegador -->
+		<meta name="theme-color" content="#020617" />
+
+		<!-- Preconexiones para mejorar la carga de fuentes externas -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Favicon: Icono del sitio que aparece en la pestaña del navegador -->
+		<link rel="icon" type="image/svg+xml" href="/dev-logo.svg" />
+		<!-- Título: Texto que aparece en la pestaña del navegador y resultados de búsqueda -->
+		<title>Portafolio de Felipe - Tecnologo en Desarrollo de Software</title>
+	</head>
+	<!-- Body: Contenedor principal del contenido visible con tipografía personalizada -->
+	<body class="font-notebook">
+		<!-- Slot de Astro: Renderiza el contenido específico de cada página aquí -->
+		<!-- Las páginas que usen este layout insertarán su contenido en este punto -->
+		<slot />
+	</body>
+</html>
+
+<!-- Estilos CSS personalizados para el layout base -->
+<style>
+	/* HTML y Body: Eliminar márgenes por defecto del navegador */
+	/* Asegura que el contenido ocupe toda la altura de la pantalla sin espacios no deseados */
+	/* La altura 100% permite que las secciones con min-h-screen funcionen correctamente */
+	html,
+	body {
+		margin: 0;
+		height: 100%;
+	}
+</style>

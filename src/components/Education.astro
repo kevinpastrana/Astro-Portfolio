@@ -1,0 +1,220 @@
+---
+// Componente: Sección "Educación"
+// Timeline vertical con trayectoria académica del usuario
+// Incluye tarjetas de información con instituciones, fechas y botones de acción
+// Diseño responsivo que se adapta a dispositivos móviles y escritorio
+// Utiliza Tailwind CSS para estilos y Astro para la estructura
+---
+
+<!-- Sección principal: Contenedor de altura completa con flexbox centrado -->
+<section
+  id="educacion"
+  class="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
+>
+  <!-- Contenedor principal: Limita ancho máximo y asegura que ocupe el ancho completo -->
+  <div class="max-w-4xl w-full">
+    <!-- Encabezado de sección: Título y icono principal -->
+    <div class="mb-16">
+      <!-- Título principal con icono de educación: Encabezado de la sección -->
+      <h2
+        class="text-3xl sm:text-4xl md:text-5xl font-bold text-white flex items-center gap-3 sm:gap-4"
+      >
+        <!-- Icono SVG de educación mejorado: Birrete académico con líneas de estudio -->
+        <svg
+          class="w-10 h-10 sm:w-12 sm:h-12 text-blue-400"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <!-- Path SVG: Primera parte del birrete (casquete) -->
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 14l9-5-9-5-9 5 9 5z"></path>
+          <!-- Path SVG: Segunda parte (línea de educación superior) -->
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+          ></path>
+          <!-- Path SVG: Tercera parte (proyección 3D del birrete) -->
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+          ></path>
+        </svg>
+        <!-- Texto del encabezado: Título de la sección -->
+        Educación
+      </h2>
+    </div>
+
+    <!-- Timeline: Contenedor del historial académico vertical -->
+    <div class="space-y-12 relative mx-auto" style="max-width: fit-content;">
+      <!-- Línea vertical: Conecta visualmente los puntos del timeline -->
+      <div
+        class="absolute left-5 top-0 bottom-0 w-1 bg-linear-to-b from-transparent via-slate-500/40 via-50% to-transparent opacity-50"
+      >
+      </div>
+
+      <!-- Entrada 1: Universidad Surcolombiana -->
+      <div class="pl-14 sm:pl-16 relative group">
+        <!-- Punto en la línea: Círculo rojo con sombra de enfoque -->
+        <div
+          class="absolute left-0 top-6 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-red-400 to-red-600 border-4 border-slate-900 shadow-xl shadow-red-500/50 flex items-center justify-center group-hover:scale-125 group-hover:shadow-red-500/80 transition-all duration-300 z-10"
+        >
+          <!-- Punto interior blanco: Centro del indicador del timeline -->
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+        </div>
+
+        <!-- Contenedor de información: Tarjeta con detalles de la institución -->
+        <div
+          class="bg-slate-800/40 backdrop-blur-md rounded-lg p-6 border border-slate-700/60 hover:border-red-500/60 hover:bg-slate-800/50 transition-all duration-300 group/card"
+        >
+          <!-- Nombre de la institución: Universidad Surcolombiana en color rojo -->
+          <h3 class="text-2xl font-bold text-red-400 mb-2">
+            Universidad Surcolombiana
+          </h3>
+
+          <!-- Ubicación y estado: Información de dónde y cuándo -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 text-slate-300"
+          >
+            <!-- Nombre de la ciudad: Ubicación geográfica -->
+            <p class="font-semibold text-white">Neiva, Huila</p>
+            <!-- Separador visual: Punto que divide información en escritorio -->
+            <span class="hidden sm:inline text-slate-500">•</span>
+            <!-- Fecha de graduación: Momento de egreso esperado -->
+            <p class="text-slate-400">Graduado en Enero del 2026</p>
+          </div>
+
+          <!-- Descripción: Resumen de programas y conocimientos adquiridos -->
+          <p class="text-slate-400 leading-relaxed mb-4 max-w-2xl">
+            Formación sólida en desarrollo de software con conocimientos en
+            programación, bases de datos, arquitectura de sistemas y buenas
+            prácticas de desarrollo.
+          </p>
+
+          <!-- Botones de acción: Contenedor de opciones de interacción -->
+          <div class="flex flex-wrap gap-3">
+            <!-- Botón Ver certificado: Enlace para visualizar documento de grado (pendiente de URL real) -->
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-red-500/60 text-white rounded-lg text-sm font-medium shadow-lg shadow-red-500/30 cursor-not-allowed"
+              aria-label="Ver certificado - Universidad Surcolombiana (no disponible aún)"
+              aria-disabled="true"
+              role="button"
+              tabindex="-1"
+            >
+              <!-- Icono SVG de documento: Representa certificado o archivo -->
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <!-- Path SVG: Define forma de icono de documento con líneas -->
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+              <!-- Texto del botón -->
+              Ver certificado
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Entrada 2: Salesiano San Medardo -->
+      <div class="pl-14 sm:pl-16 relative group">
+        <!-- Punto en la línea: Círculo verde con sombra de enfoque -->
+        <div
+          class="absolute left-0 top-6 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-br from-emerald-400 to-emerald-600 border-4 border-slate-900 shadow-xl shadow-emerald-500/50 flex items-center justify-center group-hover:scale-125 group-hover:shadow-emerald-500/80 transition-all duration-300 z-10"
+        >
+          <!-- Punto interior blanco: Centro del indicador del timeline -->
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+        </div>
+
+        <!-- Contenedor de información: Tarjeta con detalles de la institución -->
+        <div
+          class="bg-slate-800/40 backdrop-blur-md rounded-lg p-6 border border-slate-700/60 hover:border-emerald-500/60 hover:bg-slate-800/50 transition-all duration-300 group/card"
+        >
+          <!-- Nombre de la institución: Salesiano San Medardo en color esmeralda -->
+          <h3 class="text-2xl font-bold text-emerald-400 mb-2">
+            Salesiano San Medardo
+          </h3>
+
+          <!-- Ubicación y fecha: Información de dónde y cuándo -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 text-slate-300"
+          >
+            <!-- Nombre de la ciudad: Ubicación geográfica -->
+            <p class="font-semibold text-white">Neiva, Huila</p>
+            <!-- Separador visual: Punto que divide información en escritorio -->
+            <span class="hidden sm:inline text-slate-500">•</span>
+            <!-- Fecha de graduación: Momento de egreso completado -->
+            <p class="text-slate-400">Graduado en Noviembre del 2022</p>
+          </div>
+
+          <!-- Descripción: Resumen de formación académica completada -->
+          <p class="text-slate-400 leading-relaxed mb-4 max-w-2xl">
+            Egresado de bachillerato con formación académica sólida. Base
+            fundamental en ciencias, matemáticas y tecnología que sientan las
+            bases para carrera profesional en software.
+          </p>
+
+          <!-- Botones de acción: Contenedor de opciones de interacción -->
+          <div class="flex flex-wrap gap-3">
+            <!-- Botón Ver certificado: Enlace para visualizar diploma de bachillerato (pendiente de URL real) -->
+            <a
+              href="#"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/60 text-white rounded-lg text-sm font-medium shadow-lg shadow-emerald-500/30 cursor-not-allowed"
+              aria-label="Ver certificado - Salesiano San Medardo (no disponible aún)"
+              aria-disabled="true"
+              role="button"
+              tabindex="-1"
+            >
+              <!-- Icono SVG de documento: Representa certificado o archivo -->
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <!-- Path SVG: Define forma de icono de documento con líneas -->
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+              <!-- Texto del botón -->
+              Ver certificado
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Estilos CSS personalizados para la sección "Educación" -->
+<style>
+  /* Fondo: Gradiente diagonal sutil azul-gris-azul con transparencia para profundidad visual */
+  section {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.7) 0%,
+      rgba(30, 41, 59, 0.6) 50%,
+      rgba(15, 23, 42, 0.7) 100%
+    );
+  }
+</style>

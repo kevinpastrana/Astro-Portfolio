@@ -1,0 +1,18 @@
+/* Archivo: global.css - Estilos globales del portafolio */
+/* Importa y configura Tailwind CSS v4 para todo el proyecto */
+/* Define estilos base, componentes y utilidades de Tailwind */
+/* Este archivo se importa en Layout.astro para aplicar estilos globalmente */
+
+/* Importación de Tailwind CSS v4: Incluye preflight, componentes y utilidades */
+/* En v4, una sola importación reemplaza las directivas @tailwind de v3 */
+@import "tailwindcss";
+
+/* Estilos globales personalizados: Añade aquí estilos adicionales después de Tailwind */
+/* Estos estilos se aplicarán globalmente a todas las páginas del sitio */
+
+/* Scroll suave para navegación entre secciones, respetando usuarios con reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}

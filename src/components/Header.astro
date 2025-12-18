@@ -1,0 +1,189 @@
+---
+// Componente: Header de navegación
+// Barra de navegación fija con efecto glassmorphism y alternador de tema
+// Incluye scrollspy dinámico para resaltar la sección activa durante el desplazamiento
+// Navegación responsiva con enlaces a todas las secciones del portafolio
+// Utiliza Tailwind CSS para estilos y Astro para la estructura
+---
+
+<!-- Header principal: Contenedor fijo en la parte superior con z-index alto -->
+<header class="fixed inset-x-0 top-0 z-50 py-4 px-4 sm:py-6 sm:px-6">
+  <!-- Contenedor principal: Centrado con ancho máximo y flexbox para distribución -->
+  <div class="max-w-7xl mx-auto flex items-center justify-center gap-6">
+    <!-- Barra de navegación: Efecto glassmorphism con fondo semitransparente y desenfoque -->
+    <nav
+      class="backdrop-blur-sm bg-white/70 dark:bg-slate-800/70 rounded-2xl px-6 py-3 shadow-sm border border-slate-200/60 dark:border-slate-700/60"
+      role="navigation"
+      aria-label="Navegación principal"
+    >
+      <!-- Lista de enlaces: Contenedor flex con espaciado uniforme entre elementos -->
+      <ul
+        class="flex items-center gap-3 sm:gap-8 text-xs sm:text-sm font-medium"
+      >
+        <!-- Elemento de lista: Enlace a sección "Sobre mí" -->
+        <li>
+          <!-- Enlace interno: Navega a sección sobre mí con atributo data para scrollspy -->
+          <a
+            href="#sobre-mi"
+            class="nav-link text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
+            data-section="sobre-mi"
+          >
+            <!-- Texto del enlace: Etiqueta de navegación -->
+            Sobre mí
+          </a>
+        </li>
+        <!-- Elemento de lista: Enlace a sección "Educación" -->
+        <li>
+          <!-- Enlace interno: Navega a sección educación con atributo data para scrollspy -->
+          <a
+            href="#educacion"
+            class="nav-link text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
+            data-section="educacion"
+          >
+            <!-- Texto del enlace: Etiqueta de navegación -->
+            Educación
+          </a>
+        </li>
+        <!-- Elemento de lista: Enlace a sección "Proyectos" -->
+        <li>
+          <!-- Enlace interno: Navega a sección proyectos con atributo data para scrollspy -->
+          <a
+            href="#proyectos"
+            class="nav-link text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
+            data-section="proyectos"
+          >
+            <!-- Texto del enlace: Etiqueta de navegación -->
+            Proyectos
+          </a>
+        </li>
+        <!-- Elemento de lista: Enlace a sección "Contacto" -->
+        <li>
+          <!-- Enlace interno: Navega a sección contacto con atributo data para scrollspy -->
+          <a
+            href="mailto:elihot1999@gmail.com"
+            class="nav-link text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
+            data-section="contacto"
+          >
+            <!-- Texto del enlace: Etiqueta de navegación -->
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Script JavaScript: Manejo de tema y scrollspy dinámico -->
+<script is:inline>
+  (function () {
+    function setupScrollSpy() {
+      const navLinks = document.querySelectorAll(".nav-link");
+      if (!navLinks.length) return;
+
+      const sections = Array.from(navLinks)
+        .map((link) => ({
+          id: link.dataset.section,
+          element: document.getElementById(link.dataset.section),
+          link,
+        }))
+        .filter((s) => s.element);
+
+      // Variable para rastrear la sección activa actual
+      let currentActive = null;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Encontrar la sección más visible en el viewport
+          let mostVisibleSection = null;
+          let highestRatio = 0;
+
+          entries.forEach((entry) => {
+            if (
+              entry.isIntersecting &&
+              entry.intersectionRatio > highestRatio
+            ) {
+              highestRatio = entry.intersectionRatio;
+              mostVisibleSection = entry.target.id;
+            }
+          });
+
+          // Si encontramos una sección visible, actualizarla
+          if (mostVisibleSection && mostVisibleSection !== currentActive) {
+            currentActive = mostVisibleSection;
+
+            navLinks.forEach((link) => {
+              const isActive = link.dataset.section === mostVisibleSection;
+              link.className = isActive
+                ? "nav-link nav-active text-blue-500 dark:text-blue-400 transition-all duration-300 font-semibold"
+                : "nav-link text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200";
+            });
+          }
+        },
+        {
+          threshold: [0.1, 0.2, 0.3, 0.4, 0.5],
+          rootMargin: "-80px 0px -40% 0px",
+        }
+      );
+
+      sections.forEach((s) => observer.observe(s.element));
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupScrollSpy);
+    } else {
+      setupScrollSpy();
+    }
+  })();
+</script>
+
+<!-- Estilos CSS personalizados para el header de navegación -->
+<style>
+  /* Header: Aplicar efecto de desenfoque (backdrop-filter) para soporte en navegadores webkit */
+  /* El desenfoque crea el efecto glassmorphism cuando hay contenido detrás del header */
+  header {
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Raíz del documento: Configurar esquema de color para navegadores modernos */
+  /* Permite que el navegador ajuste automáticamente los colores según el tema del sistema */
+  :root {
+    color-scheme: light dark;
+  }
+
+  /* Elemento HTML: Transición suave al cambiar entre temas claro y oscuro */
+  /* Aplica animación de 0.3s para el cambio de color de fondo al alternar temas */
+  html {
+    transition: background-color 0.3s ease;
+  }
+
+  /* Efecto de iluminación para enlace activo en navegación */
+  .nav-active {
+    text-shadow:
+      0 0 10px rgba(59, 130, 246, 0.5),
+      0 0 20px rgba(59, 130, 246, 0.3);
+    position: relative;
+  }
+
+  .nav-active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    border-radius: 1px;
+    animation: glow-underline 0.3s ease-out forwards;
+  }
+
+  @keyframes glow-underline {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+</style>
